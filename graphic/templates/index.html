@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gráfico</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="chart"></div>
+
+    <script>
+        // Obtener los datos del gráfico desde el servidor
+        fetch('/data')
+            .then(response => response.json())
+            .then(data => {
+                // Crear el gráfico utilizando Plotly
+                const chartData = [
+                    {
+                        x: Object.keys(data.close_prices),
+                        close: data.close_prices,
+                        high: data.high_prices,
+                        low: data.low_prices,
+                        open: data.open_prices,
+                        type: 'candlestick',
+                        name: 'Candlestick'
+                    },
+                    {
+                        x: Object.keys(data.stoch_k),
+                        y: data.stoch_k,
+                        type: 'scatter',
+                        mode: 'lines',
+                        name: 'Stoch K'
+                    },
+                    {
+                        x: Object.keys(data.stoch_d),
+                        y: data.stoch_d,
+                        type: 'scatter',
+                        mode: 'lines',
+                        name: 'Stoch D'
+                    },
+                    {
+                        x: Object.keys(data.zigzag),
+                        y: data.zigzag,
+                        type: 'scatter',
+                        mode: 'lines',
+                        name: 'Zigzag'
+                    }
+                ];
+                Plotly.newPlot('chart', chartData);
+            });
+    </script>
+</body>
+</html>

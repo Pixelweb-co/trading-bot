@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ide",
+    "\\ide\\msvc",
+    "\\ide\\msvc\\lib_proj",
+    "\\ide\\vs2005",
+    "\\ide\\vs2005\\lib_proj",
+    "\\make",
+    "\\make\\cmd",
+    "\\make\\cmd\\win32",
+    "\\make\\cmd\\win32\\msvc",
+    "\\make\\cmd\\win32\\msvc\\gen_code"
+  ],
+  "SelectedNode": "\\ide\\vs2005\\lib_proj\\ta_lib.sln",
+  "PreviewInSolutionExplorer": false
+}

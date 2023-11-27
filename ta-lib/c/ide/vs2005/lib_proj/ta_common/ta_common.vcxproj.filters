@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{b2c281ac-b22f-4e42-848f-9c19b39875f3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="src\ta_common">
+      <UniqueIdentifier>{9c8e60d5-81da-4e1c-b7d8-213ed8ca4c9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{eee0cb89-bea3-4df5-846f-30afc5720a4a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\ta_common\ta_global.c">
+      <Filter>src\ta_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_common\ta_retcode.c">
+      <Filter>src\ta_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_common\ta_version.c">
+      <Filter>src\ta_common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\src\ta_common\ta_global.h">
+      <Filter>src\ta_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\ta_common\ta_magic_nb.h">
+      <Filter>src\ta_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\ta_common\ta_pragma.h">
+      <Filter>src\ta_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ta_common.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ta_defs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ta_func.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

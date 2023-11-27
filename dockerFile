@@ -1,0 +1,33 @@
+FROM python:3.10
+
+WORKDIR /app
+
+# Instalar dependencias de compilación
+RUN apt-get update && apt-get install -y build-essential
+
+# Copiar el archivo ta-lib-0.4.0-src.tar.gz al contenedor
+COPY ta-lib-0.4.0-src.tar.gz .
+
+# Descomprimir el archivo tar.gz
+RUN tar -xvf ta-lib-0.4.0-src.tar.gz
+
+# Compilar e instalar TA-Lib
+WORKDIR /app/ta-lib
+RUN ./configure --prefix=/usr
+RUN make
+RUN make install
+
+# Regresar al directorio de trabajo principal
+WORKDIR /app
+
+# Instalar las dependencias de Python
+RUN pip install numpy==1.21.0
+RUN pip install pandas==1.3.0
+RUN pip install colorama==0.4.4
+RUN pip install talib==0.4.0
+
+# Copiar el código fuente
+COPY sigzag.py .
+
+# Ejecutar el script
+CMD ["python3", "sigzag.py"]

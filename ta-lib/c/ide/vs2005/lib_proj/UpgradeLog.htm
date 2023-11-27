@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+ <html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><meta content="en-us" http-equiv="Content-Language" /><meta content="text/html; charset=utf-16" http-equiv="Content-Type" /><title _locID="ConversionReport0">
+          Informe de migración
+        </title><style> 
+                    /* Body style, for the entire document */
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    /* Header1 style, used for the main title */
+                    h1
+                    {
+                        padding: 10px 0px 10px 10px;
+                        font-size: 21pt;
+                        background-color: #E2E2E2;
+                        border-bottom: 1px #C1C1C2 solid; 
+                        color: #201F20;
+                        margin: 0;
+                        font-weight: normal;
+                    }
+
+                    /* Header2 style, used for "Overview" and other sections */
+                    h2
+                    {
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                    }
+
+                    /* Header3 style, used for sub-sections, such as project name */
+                    h3
+                    {
+                        font-weight: normal;
+                        font-size: 15pt;
+                        margin: 0;
+                        padding: 15px 0 5px 0;
+                        background-color: transparent;
+                    }
+
+                    /* Color all hyperlinks one color */
+                    a
+                    {
+                        color: #1382CE;
+                    }
+
+                    /* Table styles */ 
+                    table
+                    {
+                        border-spacing: 0 0;
+                        border-collapse: collapse;
+                        font-size: 10pt;
+                    }
+
+                    table th
+                    {
+                        background: #E7E7E8;
+                        text-align: left;
+                        text-decoration: none;
+                        font-weight: normal;
+                        padding: 3px 6px 3px 6px;
+                    }
+
+                    table td
+                    {
+                        vertical-align: top;
+                        padding: 3px 6px 5px 5px;
+                        margin: 0px;
+                        border: 1px solid #E7E7E8;
+                        background: #F7F7F8;
+                    }
+
+                    /* Local link is a style for hyperlinks that link to file:/// content, there are lots so color them as 'normal' text until the user mouse overs */
+                    .localLink
+                    {
+                        color: #1E1E1F;
+                        background: #EEEEED;
+                        text-decoration: none;
+                    }
+
+                    .localLink:hover
+                    {
+                        color: #1382CE;
+                        background: #FFFF99;
+                        text-decoration: none;
+                    }
+
+                    /* Center text, used in the over views cells that contain message level counts */ 
+                    .textCentered
+                    {
+                        text-align: center;
+                    }
+
+                    /* The message cells in message tables should take up all avaliable space */
+                    .messageCell
+                    {
+                        width: 100%;
+                    }
+
+                    /* Padding around the content after the h1 */ 
+                    #content 
+                    {
+	                    padding: 0px 12px 12px 12px; 
+                    }
+
+                    /* The overview table expands to width, with a max width of 97% */ 
+                    #overview table
+                    {
+                        width: auto;
+                        max-width: 75%; 
+                    }
+
+                    /* The messages tables are always 97% width */
+                    #messages table
+                    {
+                        width: 97%;
+                    }
+
+                    /* All Icons */
+                    .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+                    {
+                        min-width:18px;
+                        min-height:18px; 
+                        background-repeat:no-repeat;
+                        background-position:center;
+                    }
+
+                    /* Success icon encoded */
+                    .IconSuccessEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconSuccess#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+                    }
+
+                    /* Information icon encoded */
+                    .IconInfoEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconInformation#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+                    }
+
+                    /* Warning icon encoded */
+                    .IconWarningEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconWarning#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+                    }
+
+                    /* Error icon encoded */
+                    .IconErrorEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconError#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+                    }
+                 </style><script type="text/javascript" language="javascript"> 
+          
+            // Startup 
+            // Hook up the the loaded event for the document/window, to linkify the document content
+            var startupFunction = function() { linkifyElement("messages"); };
+            
+            if(window.attachEvent)
+            {
+              window.attachEvent('onload', startupFunction);
+            }
+            else if (window.addEventListener) 
+            {
+              window.addEventListener('load', startupFunction, false);
+            }
+            else 
+            {
+              document.addEventListener('load', startupFunction, false);
+            } 
+            
+            // Toggles the visibility of table rows with the specified name 
+            function toggleTableRowsByName(name)
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  if(!!currentName && currentName.indexOf(name) == 0)
+                  {
+                      var isVisible = allRows[i].style.display == ''; 
+                      isVisible ? allRows[i].style.display = 'none' : allRows[i].style.display = '';
+                  }
+               }
+            }
+            
+            function scrollToFirstVisibleRow(name) 
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  var isVisible = allRows[i].style.display == ''; 
+                  if(!!currentName && currentName.indexOf(name) == 0 && isVisible)
+                  {
+                     allRows[i].scrollIntoView(true); 
+                     return true; 
+                  }
+               }
+               
+               return false;
+            }
+            
+            // Linkifies the specified text content, replaces candidate links with html links 
+            function linkify(text)
+            {
+                 if(!text || 0 === text.length)
+                 {
+                     return text; 
+                 }
+
+                 // Find http, https and ftp links and replace them with hyper links 
+                 var urlLink = /(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\/\\\+&%\$#\=~;\{\}])*/gi;
+                 
+                 return text.replace(urlLink, '<a href="$&">$&</a>') ;
+            }
+            
+            // Linkifies the specified element by ID
+            function linkifyElement(id)
+            {
+                var element = document.getElementById(id);
+                if(!!element)
+                {
+                  element.innerHTML = linkify(element.innerHTML); 
+                }
+            }
+            
+            function ToggleMessageVisibility(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              toggleTableRowsByName("MessageRowClass" + projectName);
+              toggleTableRowsByName('MessageRowHeaderShow' + projectName);
+              toggleTableRowsByName('MessageRowHeaderHide' + projectName); 
+            }
+            
+            function ScrollToFirstVisibleMessage(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              // First try the 'Show messages' row
+              if(!scrollToFirstVisibleRow('MessageRowHeaderShow' + projectName))
+              {
+                // Failed to find a visible row for 'Show messages', try an actual message row 
+                scrollToFirstVisibleRow('MessageRowClass' + projectName); 
+              }
+            }
+           </script></head><body><h1 _locID="ConversionReport">
+          Informe de migración - </h1><div id="content"><h2 _locID="OverviewTitle">Información general</h2><div id="overview"><table><tr><th></th><th _locID="ProjectTableHeader">Proyecto</th><th _locID="PathTableHeader">Ruta de acceso</th><th _locID="ErrorsTableHeader">Errores</th><th _locID="WarningsTableHeader">Advertencias</th><th _locID="MessagesTableHeader">Mensajes</th></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#ta_libc">ta_libc</a></strong></td><td>ta_libc\ta_libc.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#ta_libcWarning">5</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('ta_libc'); return false;">2</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#gen_code">gen_code</a></strong></td><td>gen_code\gen_code.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#gen_codeWarning">18</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('gen_code'); return false;">3</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#ta_abstract">ta_abstract</a></strong></td><td>ta_abstract\ta_abstract.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#ta_abstractWarning">18</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('ta_abstract'); return false;">2</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#ta_common">ta_common</a></strong></td><td>ta_common\ta_common.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#ta_commonWarning">18</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('ta_common'); return false;">2</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#ta_func">ta_func</a></strong></td><td>ta_func\ta_func.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#ta_funcWarning">18</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('ta_func'); return false;">2</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#ta_regtest">ta_regtest</a></strong></td><td>ta_regtest\ta_regtest.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#ta_regtestWarning">18</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('ta_regtest'); return false;">3</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#Solution"><span _locID="OverviewSolutionSpan">Solución</span></a></strong></td><td>ta_lib.sln</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#SolutionWarning">1</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('Solution'); return false;">2</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#documents">documents</a></strong></td><td>documents</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr></table></div><h2 _locID="SolutionAndProjectsTitle">Solución y proyectos</h2><div id="messages"><a name="ta_libc" /><h3>ta_libc</h3><table><tr id="ta_libcHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Mensaje</th></tr><tr name="WarningRowClassta_libc"><td class="IconWarningEncoded"><a name="ta_libcWarning" /></td><td class="messageCell"><strong>ta_libc\ta_libc.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassta_libc"><td class="IconWarningEncoded"><a name="ta_libcWarning" /></td><td class="messageCell"><strong>ta_libc\ta_libc.vcproj:
+        </strong><span>VCConvertEngine could not convert attribute CompileAsManaged =  under Tool VCNMakeTool.</span></td></tr><tr name="WarningRowClassta_libc"><td class="IconWarningEncoded"><a name="ta_libcWarning" /></td><td class="messageCell"><strong>ta_libc\ta_libc.vcproj:
+        </strong><span>VCConvertEngine could not convert attribute CompileAsManaged =  under Tool VCNMakeTool.</span></td></tr><tr name="WarningRowClassta_libc"><td class="IconWarningEncoded"><a name="ta_libcWarning" /></td><td class="messageCell"><strong>ta_libc\ta_libc.vcproj:
+        </strong><span>VCConvertEngine could not convert attribute CompileAsManaged =  under Tool VCNMakeTool.</span></td></tr><tr name="WarningRowClassta_libc"><td class="IconWarningEncoded"><a name="ta_libcWarning" /></td><td class="messageCell"><strong>ta_libc\ta_libc.vcproj:
+        </strong><span>VCConvertEngine could not convert attribute CompileAsManaged =  under Tool VCNMakeTool.</span></td></tr><tr name="MessageRowHeaderShowta_libc"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="ta_libcMessage" onclick="ToggleMessageVisibility('ta_libc'); return false;">
+          Mostrar 2 mensajes adicionales
+        </a></td></tr><tr name="MessageRowClassta_libc" style="display: none"><td class="IconInfoEncoded"><a name="ta_libcMessage" /></td><td class="messageCell"><strong>ta_libc\ta_libc.vcproj:
+        </strong><span>Converting project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_libc\ta_libc.vcproj'.</span></td></tr><tr name="MessageRowClassta_libc" style="display: none"><td class="IconInfoEncoded"><a name="ta_libcMessage" /></td><td class="messageCell"><strong>ta_libc\ta_libc.vcproj:
+        </strong><span>Done converting to new project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_libc\ta_libc.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideta_libc"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="ta_libcMessage" onclick="ToggleMessageVisibility('ta_libc'); return false;">
+          Ocultar 2 mensajes adicionales
+        </a></td></tr></table><a name="gen_code" /><h3>gen_code</h3><table><tr id="gen_codeHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Mensaje</th></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\gen_code.exe') does not match the Librarian's OutputFile property value '.\..\..\..\..\bin\gen_code.exe' ('D:\trading\ta-lib\bin\gen_code.exe') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('gen_code') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\gen_code_cmr.exe' ('gen_code_cmr') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\gen_code.exe') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\gen_code_cmr.exe' ('D:\trading\ta-lib\bin\gen_code_cmr.exe') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\gen_code.exe') does not match the Librarian's OutputFile property value '.\..\..\..\..\bin\gen_code.exe' ('D:\trading\ta-lib\bin\gen_code.exe') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('gen_code') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\gen_code_cmd.exe' ('gen_code_cmd') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\gen_code.exe') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\gen_code_cmd.exe' ('D:\trading\ta-lib\bin\gen_code_cmd.exe') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\gen_code.exe') does not match the Librarian's OutputFile property value '.\..\..\..\..\bin\gen_code.exe' ('D:\trading\ta-lib\bin\gen_code.exe') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('gen_code') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\gen_code_cdr.exe' ('gen_code_cdr') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\gen_code.exe') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\gen_code_cdr.exe' ('D:\trading\ta-lib\bin\gen_code_cdr.exe') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\gen_code.exe') does not match the Librarian's OutputFile property value '.\..\..\..\..\bin\gen_code.exe' ('D:\trading\ta-lib\bin\gen_code.exe') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('gen_code') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\gen_code_cdd.exe' ('gen_code_cdd') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassgen_code"><td class="IconWarningEncoded"><a name="gen_codeWarning" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\gen_code.exe') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\gen_code_cdd.exe' ('D:\trading\ta-lib\bin\gen_code_cdd.exe') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="MessageRowHeaderShowgen_code"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="gen_codeMessage" onclick="ToggleMessageVisibility('gen_code'); return false;">
+          Mostrar 3 mensajes adicionales
+        </a></td></tr><tr name="MessageRowClassgen_code" style="display: none"><td class="IconInfoEncoded"><a name="gen_codeMessage" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>Converting project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\gen_code\gen_code.vcproj'.</span></td></tr><tr name="MessageRowClassgen_code" style="display: none"><td class="IconInfoEncoded"><a name="gen_codeMessage" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.</span></td></tr><tr name="MessageRowClassgen_code" style="display: none"><td class="IconInfoEncoded"><a name="gen_codeMessage" /></td><td class="messageCell"><strong>gen_code\gen_code.vcproj:
+        </strong><span>Done converting to new project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\gen_code\gen_code.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHidegen_code"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="gen_codeMessage" onclick="ToggleMessageVisibility('gen_code'); return false;">
+          Ocultar 3 mensajes adicionales
+        </a></td></tr></table><a name="ta_abstract" /><h3>ta_abstract</h3><table><tr id="ta_abstractHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Mensaje</th></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_abstract') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_abstract_cmr.lib' ('ta_abstract_cmr') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_abstract.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_abstract_cmr.lib' ('D:\trading\ta-lib\lib/ta_abstract_cmr.lib') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_abstract.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_abstract.lib' ('D:\trading\ta-lib\lib\ta_abstract.lib') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_abstract') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_abstract_cmd.lib' ('ta_abstract_cmd') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_abstract.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_abstract_cmd.lib' ('D:\trading\ta-lib\lib/ta_abstract_cmd.lib') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_abstract.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_abstract.lib' ('D:\trading\ta-lib\lib\ta_abstract.lib') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_abstract') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_abstract_cdr.lib' ('ta_abstract_cdr') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_abstract.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_abstract_cdr.lib' ('D:\trading\ta-lib\lib/ta_abstract_cdr.lib') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_abstract.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_abstract.lib' ('D:\trading\ta-lib\lib\ta_abstract.lib') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_abstract') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_abstract_cdd.lib' ('ta_abstract_cdd') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_abstract.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_abstract_cdd.lib' ('D:\trading\ta-lib\lib/ta_abstract_cdd.lib') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_abstract"><td class="IconWarningEncoded"><a name="ta_abstractWarning" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_abstract.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_abstract.lib' ('D:\trading\ta-lib\lib\ta_abstract.lib') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="MessageRowHeaderShowta_abstract"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="ta_abstractMessage" onclick="ToggleMessageVisibility('ta_abstract'); return false;">
+          Mostrar 2 mensajes adicionales
+        </a></td></tr><tr name="MessageRowClassta_abstract" style="display: none"><td class="IconInfoEncoded"><a name="ta_abstractMessage" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>Converting project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_abstract\ta_abstract.vcproj'.</span></td></tr><tr name="MessageRowClassta_abstract" style="display: none"><td class="IconInfoEncoded"><a name="ta_abstractMessage" /></td><td class="messageCell"><strong>ta_abstract\ta_abstract.vcproj:
+        </strong><span>Done converting to new project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_abstract\ta_abstract.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideta_abstract"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="ta_abstractMessage" onclick="ToggleMessageVisibility('ta_abstract'); return false;">
+          Ocultar 2 mensajes adicionales
+        </a></td></tr></table><a name="ta_common" /><h3>ta_common</h3><table><tr id="ta_commonHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Mensaje</th></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_common') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_common_cmr.lib' ('ta_common_cmr') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_common.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_common_cmr.lib' ('D:\trading\ta-lib\lib/ta_common_cmr.lib') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_common.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_common.lib' ('D:\trading\ta-lib\lib\ta_common.lib') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_common') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_common_cmd.lib' ('ta_common_cmd') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_common.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_common_cmd.lib' ('D:\trading\ta-lib\lib/ta_common_cmd.lib') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_common.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_common.lib' ('D:\trading\ta-lib\lib\ta_common.lib') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_common') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_common_cdr.lib' ('ta_common_cdr') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_common.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_common_cdr.lib' ('D:\trading\ta-lib\lib/ta_common_cdr.lib') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_common.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_common.lib' ('D:\trading\ta-lib\lib\ta_common.lib') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_common') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_common_cdd.lib' ('ta_common_cdd') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_common.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_common_cdd.lib' ('D:\trading\ta-lib\lib/ta_common_cdd.lib') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_common"><td class="IconWarningEncoded"><a name="ta_commonWarning" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_common.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_common.lib' ('D:\trading\ta-lib\lib\ta_common.lib') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="MessageRowHeaderShowta_common"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="ta_commonMessage" onclick="ToggleMessageVisibility('ta_common'); return false;">
+          Mostrar 2 mensajes adicionales
+        </a></td></tr><tr name="MessageRowClassta_common" style="display: none"><td class="IconInfoEncoded"><a name="ta_commonMessage" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>Converting project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_common\ta_common.vcproj'.</span></td></tr><tr name="MessageRowClassta_common" style="display: none"><td class="IconInfoEncoded"><a name="ta_commonMessage" /></td><td class="messageCell"><strong>ta_common\ta_common.vcproj:
+        </strong><span>Done converting to new project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_common\ta_common.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideta_common"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="ta_commonMessage" onclick="ToggleMessageVisibility('ta_common'); return false;">
+          Ocultar 2 mensajes adicionales
+        </a></td></tr></table><a name="ta_func" /><h3>ta_func</h3><table><tr id="ta_funcHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Mensaje</th></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_func') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_func_cmr.lib' ('ta_func_cmr') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_func.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_func_cmr.lib' ('D:\trading\ta-lib\lib/ta_func_cmr.lib') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_func.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_func.lib' ('D:\trading\ta-lib\lib\ta_func.lib') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_func') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_func_cmd.lib' ('ta_func_cmd') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_func.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_func_cmd.lib' ('D:\trading\ta-lib\lib/ta_func_cmd.lib') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_func.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_func.lib' ('D:\trading\ta-lib\lib\ta_func.lib') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_func') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_func_cdr.lib' ('ta_func_cdr') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_func.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_func_cdr.lib' ('D:\trading\ta-lib\lib/ta_func_cdr.lib') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_func.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_func.lib' ('D:\trading\ta-lib\lib\ta_func.lib') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_func') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_func_cdd.lib' ('ta_func_cdd') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_func.lib') does not match the Librarian's OutputFile property value '.\..\..\..\..\lib/ta_func_cdd.lib' ('D:\trading\ta-lib\lib/ta_func_cdd.lib') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_func"><td class="IconWarningEncoded"><a name="ta_funcWarning" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\lib\ta_func.lib') does not match the Linker's OutputFile property value '.\..\..\..\..\lib\ta_func.lib' ('D:\trading\ta-lib\lib\ta_func.lib') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="MessageRowHeaderShowta_func"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="ta_funcMessage" onclick="ToggleMessageVisibility('ta_func'); return false;">
+          Mostrar 2 mensajes adicionales
+        </a></td></tr><tr name="MessageRowClassta_func" style="display: none"><td class="IconInfoEncoded"><a name="ta_funcMessage" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>Converting project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_func\ta_func.vcproj'.</span></td></tr><tr name="MessageRowClassta_func" style="display: none"><td class="IconInfoEncoded"><a name="ta_funcMessage" /></td><td class="messageCell"><strong>ta_func\ta_func.vcproj:
+        </strong><span>Done converting to new project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_func\ta_func.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideta_func"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="ta_funcMessage" onclick="ToggleMessageVisibility('ta_func'); return false;">
+          Ocultar 2 mensajes adicionales
+        </a></td></tr></table><a name="ta_regtest" /><h3>ta_regtest</h3><table><tr id="ta_regtestHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Mensaje</th></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\ta_regtest.exe') does not match the Librarian's OutputFile property value '.\..\..\..\..\bin\ta_regtest.exe' ('D:\trading\ta-lib\bin\ta_regtest.exe') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_regtest') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\ta_regtest_cmr.exe' ('ta_regtest_cmr') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\ta_regtest.exe') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\ta_regtest_cmr.exe' ('D:\trading\ta-lib\bin\ta_regtest_cmr.exe') in project configuration 'cmr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\ta_regtest.exe') does not match the Librarian's OutputFile property value '.\..\..\..\..\bin\ta_regtest.exe' ('D:\trading\ta-lib\bin\ta_regtest.exe') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_regtest') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\ta_regtest_cmd.exe' ('ta_regtest_cmd') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\ta_regtest.exe') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\ta_regtest_cmd.exe' ('D:\trading\ta-lib\bin\ta_regtest_cmd.exe') in project configuration 'cmd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\ta_regtest.exe') does not match the Librarian's OutputFile property value '.\..\..\..\..\bin\ta_regtest.exe' ('D:\trading\ta-lib\bin\ta_regtest.exe') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_regtest') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\ta_regtest_cdr.exe' ('ta_regtest_cdr') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\ta_regtest.exe') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\ta_regtest_cdr.exe' ('D:\trading\ta-lib\bin\ta_regtest_cdr.exe') in project configuration 'cdr|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\ta_regtest.exe') does not match the Librarian's OutputFile property value '.\..\..\..\..\bin\ta_regtest.exe' ('D:\trading\ta-lib\bin\ta_regtest.exe') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetName) ('ta_regtest') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\ta_regtest_cdd.exe' ('ta_regtest_cdd') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="WarningRowClassta_regtest"><td class="IconWarningEncoded"><a name="ta_regtestWarning" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>MSB8012: $(TargetPath) ('D:\trading\ta-lib\c\bin\ta_regtest.exe') does not match the Linker's OutputFile property value '.\..\..\..\..\bin\ta_regtest_cdd.exe' ('D:\trading\ta-lib\bin\ta_regtest_cdd.exe') in project configuration 'cdd|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).</span></td></tr><tr name="MessageRowHeaderShowta_regtest"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="ta_regtestMessage" onclick="ToggleMessageVisibility('ta_regtest'); return false;">
+          Mostrar 3 mensajes adicionales
+        </a></td></tr><tr name="MessageRowClassta_regtest" style="display: none"><td class="IconInfoEncoded"><a name="ta_regtestMessage" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>Converting project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_regtest\ta_regtest.vcproj'.</span></td></tr><tr name="MessageRowClassta_regtest" style="display: none"><td class="IconInfoEncoded"><a name="ta_regtestMessage" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.</span></td></tr><tr name="MessageRowClassta_regtest" style="display: none"><td class="IconInfoEncoded"><a name="ta_regtestMessage" /></td><td class="messageCell"><strong>ta_regtest\ta_regtest.vcproj:
+        </strong><span>Done converting to new project file 'D:\trading\ta-lib\c\ide\vs2005\lib_proj\ta_regtest\ta_regtest.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideta_regtest"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="ta_regtestMessage" onclick="ToggleMessageVisibility('ta_regtest'); return false;">
+          Ocultar 3 mensajes adicionales
+        </a></td></tr></table><a name="Solution" /><h3 _locID="ProjectDisplayNameHeader">Solución</h3><table><tr id="SolutionHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Mensaje</th></tr><tr name="WarningRowClassSolution"><td class="IconWarningEncoded"><a name="SolutionWarning" /></td><td class="messageCell"><strong>ta_lib.sln:
+        </strong><span>Visual Studio debe hacer cambios no funcionales en este proyecto para poder abrirlo en versiones posteriores a Visual Studio 2010 SP1 sin que su comportamiento se vea afectado.</span></td></tr><tr name="MessageRowHeaderShowSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Mostrar 2 mensajes adicionales
+        </a></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>ta_lib.sln:
+        </strong><span>Se realizó correctamente la copia de seguridad del archivo D:\trading\ta-lib\c\ide\vs2005\lib_proj\Backup\ta_lib.sln</span></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>ta_lib.sln:
+        </strong><span>La solución se migró correctamente</span></td></tr><tr style="display: none" name="MessageRowHeaderHideSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Ocultar 2 mensajes adicionales
+        </a></td></tr></table><a name="documents" /><h3>documents</h3><table><tr id="documentsHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Mensaje</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">documents no registró mensajes.
+                  </td></tr></table></div></div></body></html>

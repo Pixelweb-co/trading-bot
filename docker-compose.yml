@@ -1,0 +1,9 @@
+version: '3'
+services:
+  your_script:
+    build:
+      context: .
+      dockerfile: dockerfile
+    environment:
+      - IQOPTION_EMAIL=egbmaster2007@gmail.com
+      - IQOPTION_PASSWORD=16287318ed

@@ -8,7 +8,7 @@ import talib
 # Inicializar colorama
 init()
 
-API=IQ_Option("egbmaster2007@gmail.com","16287318ed")
+API=IQ_Option("xxxxxx@gmail.com", "xxxxxx")
 API.connect()# Conectarse a IQ Option
 goal="EURUSD"
 balance_type="PRACTICE"

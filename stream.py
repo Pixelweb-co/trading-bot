@@ -1,7 +1,7 @@
 from iqoptionapi.stable_api import IQ_Option
 import numpy as np
 import talib
-I_want_money=IQ_Option("egbmaster2007@gmail.com","16287318ed")
+I_want_money=IQ_Option("xxxxxx@gmail.com", "xxxxxx")
 import logging
 import time
 I_want_money.connect()#connect to iqoption

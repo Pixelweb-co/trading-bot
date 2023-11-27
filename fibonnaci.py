@@ -9,7 +9,7 @@ from colorama import init, Fore, Style
 # Inicializar colorama
 init()
 
-API=IQ_Option("egbmaster2007@gmail.com","16287318ed")
+API=IQ_Option("xxxxxx@gmail.com", "xxxxxx")
 API.connect()#connect to iqoption
 goal="EURUSD"
 balance_type="REAL"

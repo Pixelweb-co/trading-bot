@@ -6,7 +6,7 @@ from iqoptionapi.stable_api import IQ_Option
 from tensorflow.keras.models import load_model
 import subprocess
 
-API = IQ_Option("egbmaster2007@gmail.com","16287318ed")
+API = IQ_Option("xxxxxx@gmail.com", "xxxxxx")
 API.connect()  # Conectar a IQOption
 goal = "EURUSD-OTC" 
 balance_type = "PRACTICE"
